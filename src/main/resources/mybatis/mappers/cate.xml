@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cate">
+    <resultMap id="rm" type="CateVo">
+        <result column="num" property="num" />
+        <result column="title" property="title" />
+        <result column="cateorder" property="cateorder" />
+    </resultMap>
+
+    <insert id="cate" parameterType="CateVo">
+        <![CDATA[
+        INSERT INTO cate(title, cateorder) VALUES (#{title}, #{cateorder})
+        ]]>
+    </insert>
+
+    <select id="get" resultMap="rm">
+        <![CDATA[
+        SELECT * FROM cate ORDER BY cateorder
+
+        ]]>
+    </select>
+
+    <update id="standup" parameterType="Map">
+        <![CDATA[
+        UPDATE cate SET cateorder=#{cateorder}, enroll='n'
+        WHERE title=#{title}
+        ]]>
+    </update>
+
+    <update id="enrollup" parameterType="Map">
+        <![CDATA[
+        UPDATE cate SET cateorder=#{cateorder}, enroll='y'
+        WHERE title=#{title}
+        ]]>
+    </update>
+
+    <update id="reset">
+        <![CDATA[
+        UPDATE cate SET enroll='n'
+        ]]>
+    </update>
+
+</mapper>

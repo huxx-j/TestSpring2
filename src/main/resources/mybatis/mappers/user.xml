@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+    <resultMap id="rm" type="UserVo">
+        <result column="num" property="num" />
+        <result column="id" property="id" />
+        <result column="pw" property="pw" />
+        <result column="name" property="name" />
+        <result column="regDate" property="regDate" />
+    </resultMap>
+
+    <insert id="add" parameterType="UserVo" >
+        <![CDATA[
+        INSERT INTO users(id, pw, name, regDate) VALUES (#{id},PASSWORD(#{pw}),#{name},CURRENT_DATE)
+        ]]>
+    </insert>
+
+    <select id="get" parameterType="UserVo" resultMap="rm">
+        <![CDATA[
+        SELECT num,id,pw,name,regDate FROM sungwoo_test.users WHERE name=#{name}
+]]>
+    </select>
+
+
+</mapper>

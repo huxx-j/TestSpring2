@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <typeAlias alias="CateVo" type="com.huxx.vo.CateVo" />
+        <typeAlias alias="UserVo" type="com.huxx.vo.UserVo" />
+    </typeAliases>
+    <mappers>
+        <mapper resource="mybatis/mappers/cate.xml" />
+        <mapper resource="mybatis/mappers/user.xml" />
+        <!--<mappers resource="mybatis/mappers/guest.xml" />-->
+    </mappers>
+</configuration>
