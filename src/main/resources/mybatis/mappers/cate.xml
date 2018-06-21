@@ -9,9 +9,9 @@
         <result column="cateorder" property="cateorder" />
     </resultMap>
 
-    <insert id="cate" parameterType="CateVo">
+    <insert id="add" parameterType="String">
         <![CDATA[
-        INSERT INTO cate(title, cateorder) VALUES (#{title}, #{cateorder})
+        INSERT INTO cate(title,enroll) VALUES (#{title}, 'n')
         ]]>
     </insert>
 

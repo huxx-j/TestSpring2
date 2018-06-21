@@ -56,4 +56,8 @@ public class UserService {
 
         return result;
     }
+
+    public int addCate(String title) {
+        return userDao.addCate(title);
+    }
 }

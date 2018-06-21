@@ -30,4 +30,14 @@ public class ApiController {
         System.out.println(standbyOrder);
         return userService.update(enrolledOrder, standbyOrder);
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String add(String title) {
+        if (userService.addCate(title)>0) {
+            return title;
+        } else {
+            return "SaVeFaIl";
+        }
+    }
 }

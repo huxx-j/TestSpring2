@@ -553,7 +553,6 @@
     <column id="138" parent="134" name="cateorder">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="139" parent="134" name="enroll">

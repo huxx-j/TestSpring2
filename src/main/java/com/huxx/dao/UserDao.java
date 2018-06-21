@@ -28,18 +28,14 @@ public class UserDao {
     }
 
     public int enrolledUpdate(Map<String, Object> map) {
-        System.out.println("dao-0");
-
         return sqlSession.update("cate.enrollup", map);
     }
 
     public int standbyUpdate(Map<String, Object> map) {
-        System.out.println("dao-1");
-
         return sqlSession.update("cate.standup", map);
     }
 
-    public int orderReset(){
-        return sqlSession.update("cate.reset");
+    public int addCate(String title){
+        return sqlSession.insert("cate.add", title);
     }
 }

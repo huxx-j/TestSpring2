@@ -46,7 +46,9 @@
 <ul id="sortable2" class="connectedSortable"></ul> <br />
 
 <input type="button" id="mod" value="수정" />
-<input type="button" id="test" value="test">
+<input type="button" id="addBtn" value="Add">
+
+add <input type="text" id="addCate">
 
 <input id="enrolledIdx" type="text">
 <input id="standbyIdx" type="text">
@@ -59,11 +61,24 @@
         fetchList()
     });
 
-    $("#test").on("click", function () {
-       var test = $("#enrolledIdx").val();
-       var test2 = $("#standbyIdx").val();
-       console.log("1 : " + test);
-       console.log("2 : " + test2);
+    $("#addBtn").on("click", function () {
+       var title = $("#addCate").val();
+        $.ajax({
+            url: "/api/add",
+            type: "post",
+            data: {"title": title},
+            dataType: "json",
+            success: function (result) {
+                if (result=="SaVeFaIl") {
+                    alert("저장실패")
+                } else {
+                    renderAdd(title)
+                }
+            },
+            error: function (XHR, status, error) {
+                console.error(status + " : " + error);
+            }
+        });
     });
 
     function fetchList() {
@@ -80,6 +95,13 @@
                 console.error(status + " : " + error);
             }
         });
+    }
+
+    function renderAdd(title) {
+        var str = "";
+        str += "<li class='ui-state-default' id='"+ title +"'>" + title + "</li>";
+        $("#sortable1").append(str);
+
     }
 
     function render(cateVo) {
