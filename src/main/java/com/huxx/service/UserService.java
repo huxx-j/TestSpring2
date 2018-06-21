@@ -31,7 +31,6 @@ public class UserService {
     }
 
     public int update(String enrolledOrder, String standbyOrder) {
-        System.out.println("service-0");
         int result = 0;
         String[] enrolledOrderArray = enrolledOrder.split(",");
         String[] standbyOrderArray = standbyOrder.split(",");
@@ -43,7 +42,6 @@ public class UserService {
 
             result += userDao.standbyUpdate(map);
         }
-        System.out.println("service-1");
 
         for (int i = 0; i < enrolledOrderArray.length; i++) {
             Map<String, Object> map = new HashMap<>();
@@ -52,7 +50,6 @@ public class UserService {
 
             result += userDao.enrolledUpdate(map);
         }
-        System.out.println("service-2");
 
         return result;
     }

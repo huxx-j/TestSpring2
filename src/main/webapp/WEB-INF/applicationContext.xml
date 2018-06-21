@@ -45,14 +45,6 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
         <property name="password" value="1234"></property>
     </bean>
 
-    <!--&lt;!&ndash; oracle datasource (AWS RDS사용) &ndash;&gt;-->
-    <!--<bean id="oracleDatasource" class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">-->
-        <!--<property name="URL" value="jdbc:oracle:thin:@huxxinstance.c2corwmutw7a.ap-northeast-2.rds.amazonaws.com:1521:ORCL"/>-->
-        <!--<property name="user" value="jblog"/>-->
-        <!--<property name="password" value="jblog"/>-->
-        <!--<property name="connectionCachingEnabled" value="true"/>-->
-        <!--<qualifier value="main-db"/>-->
-    <!--</bean>-->
 
     <!-- MyBatis SqlSessionFactoryBean 설정-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
