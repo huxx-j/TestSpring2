@@ -5,5 +5,7 @@
 <a href="/reg/join">가입</a>
 <a href="/reg/loginform">로그인</a>
 <a href="/reg/cate">게시판</a>
+<a href="/reg/info">유저관리</a>
+
 </body>
 </html>

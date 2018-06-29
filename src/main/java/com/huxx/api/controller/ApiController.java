@@ -2,6 +2,7 @@ package com.huxx.api.controller;
 
 import com.huxx.service.UserService;
 import com.huxx.vo.CateVo;
+import com.huxx.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,17 @@ public class ApiController {
 
     @Autowired
     UserService userService;
+
+    @ResponseBody
+    @RequestMapping(value = "/getuserinfo", method = RequestMethod.POST)
+    public List<UserVo> getUserInfo(){
+        List<UserVo> list = userService.getUserInfo();
+        for (UserVo tmp : list) {
+            System.out.print(tmp.toString());
+        }
+
+        return list;
+    }
 
     @ResponseBody
     @RequestMapping(value = "/get", method = RequestMethod.POST)

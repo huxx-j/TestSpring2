@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./assets/jqGrid/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/jqGrid/css/addons/ui.multiselect.css" />
+    <script type="text/javascript" src="./assets/jqGrid/jquery.js"></script>
+    <script type="text/javascript" src="./assets/jqGrid/js/i18n/grid.locale-kr.js"></script>
+    <script type="text/javascript" src="./assets/jqGrid/js/jquery.jqGrid.min.js"></script>
+</head>
+<body>
+<div class="row">
+    <div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        var cnames = ['아이디','이름','전화번호','주소','기타','성별코드'];
+
+        $("#jqGrid").jqGrid({
+
+            url: "jqgridStartMain.do",
+            datatype: "local",
+            colNames: cnames,
+            colModel:[
+                {name:'seq',index:'seq', width:55, key:true, align:"center"},
+                {name:'name',index:'name', width:100, align:"center"},
+                {name:'phone',index:'phone', width:100},
+                {name:'address',index:'address', width:100},
+                {name:'etcc',index:'etcc', width:100},
+                {name:'gender',index:'gender',     width:100}
+            ],
+            height: 480,
+            rowNum: 10,
+            rowList: [10,20,30],
+            pager: '#jqGridPager',
+            rownumbers  : true,
+            ondblClickRow : function(rowId, iRow, iCol, e) {
+
+                if(iCol == 1) {
+
+                    alert(rowId+" 째줄 입니다.");
+                }
+            },
+
+            viewrecords : true,
+            caption:"실습용 테이블"
+
+
+        });
+
+    });
+
+    $(function () {
+        var mydata = [{seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"},
+            {seq:"1",name:"장성우",phone:"010-5555-6555",address:"aasdasd",etcc:"dddd",gender:"male"}
+
+        ];
+
+        for (var i=0; i<=mydata.length; i++) {
+            $("#jqGrid").jqGrid('addRowData', i+1, mydata[i]);
+        }
+    });
+
+
+</script>

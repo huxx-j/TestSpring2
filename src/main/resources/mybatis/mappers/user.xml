@@ -5,11 +5,17 @@
 <mapper namespace="user">
     <resultMap id="rm" type="UserVo">
         <result column="num" property="num" />
-        <result column="id" property="id" />
+        <result column="id" property="userId" />
         <result column="pw" property="pw" />
         <result column="name" property="name" />
         <result column="regDate" property="regDate" />
     </resultMap>
+
+    <select id="getAll" resultMap="rm">
+        <![CDATA[
+        select id,name,regDate from users
+        ]]>
+    </select>
 
     <insert id="add" parameterType="UserVo" >
         <![CDATA[

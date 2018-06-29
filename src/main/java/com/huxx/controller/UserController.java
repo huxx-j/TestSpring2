@@ -16,6 +16,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public String info(){
+        return "userinfo";
+    }
+
     @RequestMapping(value = "/join", method = RequestMethod.GET)
     public String reg () {
 

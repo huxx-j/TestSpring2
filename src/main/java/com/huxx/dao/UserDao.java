@@ -15,6 +15,10 @@ public class UserDao {
     @Autowired
     SqlSession sqlSession;
 
+    public List<UserVo> getUserInfo(){
+        return sqlSession.selectList("user.getAll");
+    }
+
     public void add(UserVo userVo) {
         sqlSession.insert("user.add", userVo);
     }

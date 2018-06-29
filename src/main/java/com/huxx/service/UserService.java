@@ -18,6 +18,10 @@ public class UserService {
     @Autowired
     UserDao userDao;
 
+    public List<UserVo> getUserInfo(){
+        return userDao.getUserInfo();
+    }
+
     public void add(UserVo userVo) {
         userDao.add(userVo);
     }
