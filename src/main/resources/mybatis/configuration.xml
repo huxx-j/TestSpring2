@@ -7,10 +7,23 @@
     <typeAliases>
         <typeAlias alias="CateVo" type="com.huxx.vo.CateVo" />
         <typeAlias alias="UserVo" type="com.huxx.vo.UserVo" />
+        <typeAlias alias="UsersVo" type="com.huxx.vo.UsersVo" />
+        <typeAlias alias="ScholarshipVo" type="com.huxx.vo.ScholarshipVo" />
+        <typeAlias alias="TrainingVo" type="com.huxx.vo.TrainingVo" />
+        <typeAlias alias="CareerVo" type="com.huxx.vo.CareerVo" />
+        <typeAlias alias="LicenceVo" type="com.huxx.vo.LicenceVo" />
+        <typeAlias alias="AfterServiceVo" type="com.huxx.vo.AfterServiceVo" />
+
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mappers/cate.xml" />
         <mapper resource="mybatis/mappers/user.xml" />
+        <mapper resource="mybatis/mappers/users.xml" />
+        <mapper resource="mybatis/mappers/userscholarship.xml" />
+        <mapper resource="mybatis/mappers/usertraining.xml" />
+        <mapper resource="mybatis/mappers/usercareer.xml" />
+        <mapper resource="mybatis/mappers/licence.xml" />
+        <mapper resource="mybatis/mappers/afterservice.xml" />
         <!--<mappers resource="mybatis/mappers/guest.xml" />-->
     </mappers>
 </configuration>

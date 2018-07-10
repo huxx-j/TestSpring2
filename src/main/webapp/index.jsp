@@ -6,6 +6,15 @@
 <a href="/reg/loginform">로그인</a>
 <a href="/reg/cate">게시판</a>
 <a href="/reg/info">유저관리</a>
+<a href="/reg/make">유</a>
+<a href="/reg/scholar">학력생성</a>
+<a href="/reg/traning">교육생성</a>
+<a href="/reg/career">경력생성</a>
+<a href="/reg/licence">자격증생성</a>
+<a href="/reg/as">AS생성</a>
+
+
+
 
 </body>
 </html>

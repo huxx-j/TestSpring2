@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="career">
+    <resultMap id="rm" type="CareerVo">
+        <result column="User_no" property="user_no" />
+        <result column="PeriodFr" property="periodFr" />
+        <result column="PeriodTo" property="periodTo" />
+        <result column="Oragan" property="oragan" />
+        <result column="DevPart" property="devPart" />
+        <result column="Role" property="role" />
+    </resultMap>
+
+    <insert id="addcareer" parameterType="CareerVo">
+     <![CDATA[
+        INSERT INTO bitacademy_test.UserCareer (User_no, PeriodFr, PeriodTo, Oragan, DevPart, Role)
+        VALUES (#{user_no}, #{periodFr}, #{periodTo}, #{oragan}, #{devPart}, #{role})
+
+        ]]>
+ </insert>
+
+</mapper>
+
+        <!--#{user_no}, #{periodFr}, #{periodTo}, #{oragan}, #{devPart}, #{role}-->
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `DevPart`, `Role`-->
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `DevPart`, `Role`-->
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `DevPart`, `Role`-->
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `DevPart`, `Role`-->
+
+        <!--&lt;!&ndash;#{User_no}, #{PeriodFr}, #{PeriodTo}, #{Oragan}, #{Course}, #{Content}&ndash;&gt;-->
+
+        <!--&lt;!&ndash;`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `Course`, `Content`&ndash;&gt;-->

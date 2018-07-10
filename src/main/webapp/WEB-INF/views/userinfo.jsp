@@ -10,12 +10,12 @@
 <head>
     <title>Title</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../../assets/jqGrid/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" type="text/css" href="../../assets/jqGrid/css/ui.jqgrid.css" />
-    <link rel="stylesheet" type="text/css" href="../../assets/jqGrid/css/addons/ui.multiselect.css" />
-    <script type="text/javascript" src="../../assets/jqGrid/jquery.js"></script>
-    <script type="text/javascript" src="../../assets/jqGrid/js/i18n/grid.locale-kr.js"></script>
-    <script type="text/javascript" src="../../assets/jqGrid/js/jquery.jqGrid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/jqGrid/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/jqGrid/css/addons/ui.multiselect.css" />
+    <script type="text/javascript" src="/assets/jqGrid/jquery.js"></script>
+    <script type="text/javascript" src="/assets/jqGrid/js/i18n/grid.locale-kr.js"></script>
+    <script type="text/javascript" src="/assets/jqGrid/js/jquery.jqGrid.min.js"></script>
     <style type="text/css">
         .row {
             font-size: 5px;

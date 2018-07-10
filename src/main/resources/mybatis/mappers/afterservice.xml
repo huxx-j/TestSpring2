@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="afterservice">
+    <resultMap id="rm" type="AfterServiceVo">
+        <result column="User_no" property="user_no" />
+        <result column="CompName" property="compName" />
+        <result column="Department" property="department" />
+        <result column="State" property="state" />
+        <result column="Position" property="position" />
+        <result column="PeriodFr" property="periodFr" />
+        <result column="PeriodTo" property="periodTo" />
+        <result column="TelePhone" property="telePhone" />
+    </resultMap>
+
+    <insert id="addas" parameterType="AfterServiceVo">
+     <![CDATA[
+          INSERT INTO bitacademy_test.AfterService (User_no, CompName, Department, State, Position, PeriodFr, PeriodTo, TelePhone)
+          VALUES (#{user_no}, #{compName}, #{department}, #{state}, #{position}, #{periodFr}, #{periodTo}, #{telePhone})
+        ]]>
+ </insert>
+
+</mapper>
+<!--`User_no`, `CompName`, `Department`, `State`, `Position`, `PeriodFr`, `PeriodTo`, `TelePhone`-->
+        <!--`user_no`, `compName`, `department`, `state`, `position`, `periodFr`, `periodTo`, `telePhone`-->
+
+
+        <!--#{User_no}, #{PeriodFr}, #{PeriodTo}, #{Oragan}, #{Course}, #{Content}-->
+
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `Course`, `Content`-->

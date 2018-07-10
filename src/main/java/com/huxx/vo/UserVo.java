@@ -3,32 +3,10 @@ package com.huxx.vo;
 public class UserVo {
 
     private int num;
-    private String UserId;
+    private String userId;
     private String pw;
     private String name;
     private String regDate;
-
-    public UserVo() {
-    }
-
-    public UserVo(int num, String userId, String pw, String name, String regDate) {
-        this.num = num;
-        UserId = userId;
-        this.pw = pw;
-        this.name = name;
-        this.regDate = regDate;
-    }
-
-    @Override
-    public String toString() {
-        return "UserVo{" +
-                "num=" + num +
-                ", UserId='" + UserId + '\'' +
-                ", pw='" + pw + '\'' +
-                ", name='" + name + '\'' +
-                ", regDate='" + regDate + '\'' +
-                '}';
-    }
 
     public int getNum() {
         return num;
@@ -39,11 +17,11 @@ public class UserVo {
     }
 
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
     public String getPw() {

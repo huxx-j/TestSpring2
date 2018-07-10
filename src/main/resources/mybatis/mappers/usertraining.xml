@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="training">
+    <resultMap id="rm" type="TrainingVo">
+        <result column="User_no" property="user_no" />
+        <result column="PeriodFr" property="periodFr" />
+        <result column="PeriodTo" property="periodTo" />
+        <result column="Oragan" property="oragan" />
+        <result column="Course" property="course" />
+        <result column="Content" property="content" />
+    </resultMap>
+
+    <insert id="addtraining" parameterType="TrainingVo">
+     <![CDATA[
+        INSERT INTO bitacademy_test.UserTraining (User_no, PeriodFr, PeriodTo, Oragan, Course, Content)
+                VALUES (#{user_no}, #{periodFr}, #{periodTo}, #{oragan}, #{course}, #{content})
+        ]]>
+ </insert>
+
+</mapper>
+
+
+        <!--#{User_no}, #{PeriodFr}, #{PeriodTo}, #{Oragan}, #{Course}, #{Content}-->
+
+        <!--`User_no`, `PeriodFr`, `PeriodTo`, `Oragan`, `Course`, `Content`-->

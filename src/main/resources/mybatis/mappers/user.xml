@@ -19,7 +19,7 @@
 
     <insert id="add" parameterType="UserVo" >
         <![CDATA[
-        INSERT INTO users(id, pw, name, regDate) VALUES (#{id},PASSWORD(#{pw}),#{name},CURRENT_DATE)
+        INSERT INTO users(id, pw, name, regDate) VALUES (#{userId},#{pw},#{name},CURRENT_DATE)
         ]]>
     </insert>
 
@@ -29,5 +29,13 @@
 ]]>
     </select>
 
+    <select id="">
+        <![CDATA[
+        INSERT INTO `bitacademy_test`.`Users` (
+        `AuthCode`, `NameHan`, `NameEng`, `LoginID`, `Password`, `BirthDate`, `StudResNum`, `Address`, `FamilyAddress`, `PostNum`, `Handphone`, `Telephone`, `Email`, `HomePage`, `Bank`, `Depositor`, `AccountNum`, `MillArm`, `MillRank`, `MillEnrollDate`, `MillDischargeDate`, `MillIncompletReason`, `Language`, `OS`, `ProLang`, `Magazine`, `Newspaper`, `AfterPlan`, `Motive`, `LearningContent`, `ConsultContent`, `Thesis`, `File_no`)
+        VALUES (`AuthCode`, `NameHan`, `NameEng`, `LoginID`, `Password`, `BirthDate`, `StudResNum`, `Address`, `FamilyAddress`, `PostNum`, `Handphone`, `Telephone`, `Email`, `HomePage`, `Bank`, `Depositor`, `AccountNum`, `MillArm`, `MillRank`, `MillEnrollDate`, `MillDischargeDate`, `MillIncompletReason`, `Language`, `OS`, `ProLang`, `Magazine`, `Newspaper`, `AfterPlan`, `Motive`, `LearningContent`, `ConsultContent`, `Thesis`, `File_no`)
+)
+        ]]>
+    </select>
 
 </mapper>

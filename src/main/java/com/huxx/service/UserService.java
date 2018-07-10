@@ -1,8 +1,7 @@
 package com.huxx.service;
 
 import com.huxx.dao.UserDao;
-import com.huxx.vo.CateVo;
-import com.huxx.vo.UserVo;
+import com.huxx.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,12 +17,28 @@ public class UserService {
     @Autowired
     UserDao userDao;
 
+    public void addscholar(ScholarshipVo scholarshipVo){
+        userDao.addscholar(scholarshipVo);
+    }
+    public void addtraining(TrainingVo trainingVo){
+        userDao.addtraining(trainingVo);
+    }
+    public void addcareer(CareerVo careerVo){
+        userDao.addcareer(careerVo);
+    }
+    public void addlicence(LicenceVo licenceVo){
+        userDao.addlicence(licenceVo);
+    }
+    public void addafterservice(AfterServiceVo afterServiceVo){
+        userDao.addafterservice(afterServiceVo);
+    }
+
     public List<UserVo> getUserInfo(){
         return userDao.getUserInfo();
     }
 
-    public void add(UserVo userVo) {
-        userDao.add(userVo);
+    public void add(UsersVo usersVo) {
+        userDao.add(usersVo);
     }
 
     public UserVo get(UserVo userVo) {

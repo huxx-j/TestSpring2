@@ -35,28 +35,29 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
     </context:component-scan>
 
+    <!-- MySql 설정 -->
     <!-- transactionManager -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSourceMy"></property>
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <bean id="dataSourceMy" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://192.168.1.74:3306/sungwoo_test"></property>
+        <property name="url" value="jdbc:mysql://192.168.1.74:3306/bitacademy_test"></property>
         <property name="username" value="admin"></property>
         <property name="password" value="1234"></property>
     </bean>
 
 
     <!-- MyBatis SqlSessionFactoryBean 설정-->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
+    <bean id="sqlSessionFactoryMy" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceMy"/>
         <property name="configLocation" value="classpath:mybatis/configuration.xml"/>
     </bean>
     <!-- MyBatis SqlSessionTemplate 설정-->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory"/>
+        <constructor-arg index="0" ref="sqlSessionFactoryMy"/>
     </bean>
 
 </beans>
